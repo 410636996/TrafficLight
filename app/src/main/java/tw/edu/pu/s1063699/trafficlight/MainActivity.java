@@ -5,10 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    EditText txv,txv1,txv2;
+    Button btn,btn1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +32,30 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
     }
+
     public void StartGame(View v){
-        Intent it = new Intent();
-        it.setClass(this, GameActivity.class);
-        startActivity(it);
-        finish();
+        txv=(EditText) findViewById(R.id.txv1);
+        txv1=(EditText) findViewById(R.id.txv2);
+        txv2=(EditText) findViewById(R.id.txv3);
+        if(txv.getText().toString().equals("")||txv1.getText().toString().equals("")||txv2.getText().toString().equals("")) {
+            Toast toast = Toast.makeText(MainActivity.this,
+                    "燈號的秒數不能為空白",
+                    Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+        }else if(txv.getText().toString().equals("0")||txv1.getText().toString().equals("0")||txv2.getText().toString().equals("0")){
+            Toast toast = Toast.makeText(MainActivity.this,
+                    "燈號的秒數不能為0",
+                    Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER,0,0);
+            toast.show();
+        }
+        else{
+            Intent it = new Intent();
+            it.setClass(this, GameActivity.class);
+            startActivity(it);
+            finish();
+        }
     }
 
     public void EndApp(View v){

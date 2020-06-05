@@ -51,36 +51,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnStart" />
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/txv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="請輸入綠燈秒數"
+        android:hint="請輸入綠燈秒數"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/txv2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/txv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="請輸入黃燈秒數"
+        android:hint="請輸入黃燈秒數"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <EditText
+        android:id="@+id/txv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="請輸入紅燈秒數"
+        android:hint="請輸入紅燈秒數"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/txv2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45" />
 
