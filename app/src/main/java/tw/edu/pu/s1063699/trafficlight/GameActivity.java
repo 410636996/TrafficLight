@@ -12,7 +12,7 @@ import android.view.View;
 public class GameActivity extends AppCompatActivity {
     GameSurfaceView GameSV;
     Handler handler;
-
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
