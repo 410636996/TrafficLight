@@ -10,7 +10,7 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-//555
+
 public class GameSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
     public GameSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
